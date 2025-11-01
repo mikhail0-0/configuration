@@ -1,3 +1,8 @@
+service:
+  name: notification-service
+server:
+  port: 8081
+
 spring:
   kafka:
     consumer:
@@ -10,10 +15,6 @@ spring:
   mail:
     host: localhost
     port: 1025
-
-server:
-  port:
-    8081
 
 eureka:
   client:
