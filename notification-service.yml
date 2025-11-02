@@ -13,8 +13,8 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
   mail:
-    host: localhost
-    port: 1025
+    host: ${MAIL_HOST:localhost}
+    port: ${SD_PORT:1025}
 
 eureka:
   client:
