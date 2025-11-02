@@ -11,10 +11,10 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
   mail:
-    host: ${MAIL_HOST:mailhog}
-    port: ${MAIL_PORT:1025}
+    host: localhost
+    port: 1025
 
 eureka:
   client:
     service-url:
-      defaultZone: http://${SD_HOST:service-discovery}:${SD_PORT:8761}/eureka
+      defaultZone: http://localhost:8761/eureka
