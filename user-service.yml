@@ -2,16 +2,12 @@ service:
   name: user-service
 
 spring:
-  datasource:
-    url: jdbc:postgresql://${DB_HOST:db}:${DB_PORT:5432}/postgres
-    username: ${DB_NAME:postgres}
-    password: ${DB_PASSWORD:postgres}
   kafka:
     consumer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       group-id: my-group
-      bootstrap-servers: ${KAFKA_HOST:broker}:${KAFKA_PORT:9092}
+      bootstrap-servers: ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -23,8 +19,3 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://${SD_HOST:service-discovery}:${SD_PORT:8761}/eureka
