@@ -11,5 +11,3 @@ resilience4j:
         permitted-number-of-calls-in-half-open-state: 3
         minimum-number-of-calls: 5
         automatic-transition-from-open-to-half-open-enabled: true
-server:
-  port: 8084

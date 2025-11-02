@@ -2,9 +2,6 @@ spring:
   service:
     name: service-discovery
 
-server:
-  port: ${SD_PORT:8761}
-
 eureka:
   client:
     register-with-eureka: false

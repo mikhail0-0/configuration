@@ -11,7 +11,7 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       group-id: my-group
-      bootstrap-servers: ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}
+      bootstrap-servers: ${KAFKA_HOST:broker}:${KAFKA_PORT:9092}
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -27,4 +27,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://${SD_HOST:localhost}:${SD_PORT:8761}/eureka
+      defaultZone: http://${SD_HOST:service-discovery}:${SD_PORT:8761}/eureka
