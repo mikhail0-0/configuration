@@ -7,11 +7,11 @@ spring:
     username: postgres
     password: postgres
   kafka:
+    bootstrap-servers: broker:9092
     consumer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       group-id: my-group
-      bootstrap-servers: broker:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
