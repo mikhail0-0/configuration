@@ -12,9 +12,7 @@ spring:
 
   mail:
     host: localhost
-    port: 3025
-    username: test
-    mail: test
+    port: 1025
 
 eureka:
   client:
